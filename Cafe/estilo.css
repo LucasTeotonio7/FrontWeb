@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Titillium Web";
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.inicio{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(imagens/background2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .conteudo{
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.inicio .conteudo h1{
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: -10px 0px 20px #000;
+}
+
+.inicio .conteudo p{
+    text-shadow: -10px 0px 20px #000;
+    font-weight: 300;
+}
+
+header{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header .logo{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    padding: 20px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+header .logo:hover{
+    letter-spacing: 5px;
+
+}
+
+header .logo span{
+    color: #f00736;
+    font-weight: 700;
+    padding: 0 3px;
+}
+
+header.sticky{
+    background: #111;
+    padding: 0 20px;
+    transition: 0.5s ease-in;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky .logo{
+    font-size: 1em;
+}
+
+header .navegacao{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+}
+
+header .navegacao li{
+    margin-left: 30px;
+    list-style: none;
+    transition: 0.5s;
+}
+
+header .navegacao li a{
+    color: #fff;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+header .navegacao li a:hover{
+    color: #f00736;
+    text-shadow: 0 0 50px #000;
+    letter-spacing: 1px;
+}
+
+
+
+.seta{
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background: url(imagens/seta-para-baixo.png) no-repeat;
+    background-size: 50px;
+    background-position: center;
+    cursor: pointer;
+    animation: vai-e-vem 5s linear infinite;
+    transition: 1s;
+}
+
+.seta.sticky{
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+@keyframes vai-e-vem{
+    0%{
+        bottom: 0;
+    }
+
+    50%{
+        bottom: 20px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titulo{
+    margin: 80px 0 40px;
+}
+
+.titulo h2{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.titulo h2 span{
+    color: #e00;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+}
+
+.sobre .conteudo{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.sobre .conteudo p{
+    position: relative;
+    text-align: justify;
+    padding-right: 40px;
+    width: 60%;
+}
+
+.sobre .conteudo .box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+}
+
+.sobre .conteudo .box .boxImg{
+    width: 100%;
+    height: 100%;
+}
+.sobre .conteudo .box .boxImg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu{
+    background-image: url(imagens/background1.jpg);
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.menu .titulo{
+    text-align: center;
+    color: #fff;
+}
+
+.menu .conteudo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .conteudo .box{
+    background: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0, 0.08);
+    box-shadow: 0 5px 35px rgba(0,0,0,0.1);
+    margin: 5px;
+    border-radius: 1%;
+}
+
+.menu .conteudo .box .boxImg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.menu .conteudo .box .boxImg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu .conteudo .box .descricao{
+    margin-top: 10px;
+}
+
+.menu .conteudo .box .descricao h3{
+    color: #222;
+}
+
+.menu .conteudo .box .descricao p{
+    font-style: italic;
+    font-size: 1em;
+    color: #555;
+}
+
+.menu .conteudo .box .descricao .valor{
+    color:#fff;
+    font-weight: 700;
+    background: #f22237;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.contato{
+    background: url(imagens/background7.jpg);
+    background-size: cover;
+    background-position: bottom center;
+}
+
+
+.formBox{
+    position: relative;
+    max-width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.formBox h3{
+    color: #fff;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+
+.formBox .FormInput{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.formBox .FormInput input[type="text"],
+.formBox .FormInput textarea{
+    width: 100%;
+    border: 1px solid #d9d3d2;
+    border-radius: 5px;
+    padding: 10px;
+    color: #111;
+    resize: none;
+    font-size: 15px;
+}
+
+.formBox .FormInput input[type="submit"]{
+    padding: 10px 20px;
+    max-width: 100px;
+    background: #f22237;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.copyrightText{
+    text-align: center;
+    padding: 20px 0;
+    background: #222;
+}
+
+.copyrightText p{
+    color: #fff;
+}
+
+.copyrightText p a{
+    text-decoration: none;
+    color: #f22237;
+    font-weight: 600;
+}
+
+.copyrightText p a:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:800px){
+
+    .inicio .conteudo h1 {
+        font-size: 2.5em;
+        margin-bottom: 54px;
+    }
+
+    .seta {
+        background-size: 35px;
+    }
+    header.sticky .navegacao{
+        position: fixed;
+        background: #111;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-size: 1.5em;
+        display: none;
+    }
+
+    header.sticky .navegacao li{
+        margin-bottom: 20px;
+    }
+
+    header .logo {
+        letter-spacing: 1px;
+        padding: 20px 0;
+    }
+
+    header .menu3barras{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(imagens/menu.png) no-repeat;
+        background-size: 30px;
+        background-position: center;
+        cursor: pointer;
+        display: none;
+        transition: 0.15s;
+    }
+
+    header.sticky .menu3barras{
+        display: flex;
+    }
+
+    .menu3barras.active{
+        background: url(imagens/close.png) no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.15s;
+        z-index: 10000;
+    }
+
+    header .navegacao.active{
+        display: flex;
+    }
+
+    section{
+        padding: 0 20px;
+    }
+    .sobre .conteudo{
+        flex-direction: column;
+    }
+
+    .sobre .conteudo p{
+        position: relative;
+        text-align: justify;
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    .sobre .conteudo .box{
+        width: 100%;
+        height: 50vh;
+        padding-top:10px;
+    }
+}
+
+
