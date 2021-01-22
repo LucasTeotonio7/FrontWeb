@@ -58,6 +58,8 @@ h2{
     color: #fff;
 }
 .inicio .apresentacao h3{
+    text-align: justify;
+    text-transform: capitalize;
     margin-bottom: 15px;
 }
 
@@ -65,6 +67,10 @@ h2{
     color: #11b3e4;
     font-weight: 700;
     font-size: 1.4em;
+}
+
+.inicio .apresentacao p{
+    text-align: justify;
 }
 
 .inicio .apresentacao .menu-toggle{
@@ -151,22 +157,18 @@ h2{
     padding: 40px;
 }
 
-.portfolio{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url("imagens/back1.jpg") no-repeat;
-    background-size: cover;
-}
-
 .portfolio .container{
     display: flex;
     width: 100%;
     height: 90vh;
+    padding: 40px 0;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background: url("imagens/back1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .portfolio .container .card{
@@ -181,6 +183,7 @@ h2{
     margin: 10px;
     background-color:rgba(17, 17, 17, 0.7);
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .portfolio .container .card .imgBx{
@@ -196,6 +199,7 @@ h2{
     left:0;
     width: 100%;
     height: 100%;
+    border-radius: 5px;
 }
 
 .portfolio .container .card .content{
@@ -220,6 +224,77 @@ h2{
 .portfolio .container .card .content p{
     color: #fff;
     font-weight: 200;
-    font-size: 15px;
+}
+
+@media (max-width:991px){
+    .img-box{
+        display: none;
+    }
+
+    .inicio .apresentacao {
+        width: 100%;
+        padding: 20px;
+    }
+    .inicio .apresentacao .redes {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .sobre {
+        padding: 10px;
+    }
+
+    .sobre .container section .box {
+        width: 100%;
+        flex-direction: column;
+    }
+    .sobre .container .box img{
+        order: 1;
+    }
+    .sobre .container section .box p{
+        order: 2;
+        padding: 20px;
+    }
+    .sobre .container section h3 {
+        margin-bottom: 30px;
+    }
+    .sobre .container section .box img {
+        width: 180px;
+    }
+    .portfolio .container{
+        height: auto;
+    }
+    .portfolio .container .card .imgBx::before{
+        content: 'Toque';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.712);
+        z-index: 100;
+        clip-path: circle(15% at 50% 50%);
+        color: #111;
+        font-size: 1em;
+        font-weight: bold;
+        text-transform: uppercase;
+        animation: animate 5s infinite;
+    }
+
+    @keyframes animate {
+        0%{
+            clip-path: circle(15% at 50% 50%);
+        }
+        50%{
+            clip-path: circle(17% at 50% 50%);
+        }
+        100%{
+            clip-path: circle(15% at 50% 50%);
+        }
+    }
+
+    .portfolio .container .card:hover .imgBx::before{
+        opacity: 0;
+    }
 }
 
