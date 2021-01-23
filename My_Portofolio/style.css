@@ -79,6 +79,7 @@ h2{
     background: url("imagens/menu.png") no-repeat;
     background-size: contain;
     filter: invert(1);
+    cursor: pointer;
 }
 
 .inicio .apresentacao .redes{
@@ -160,7 +161,7 @@ h2{
 .portfolio .container{
     display: flex;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     padding: 40px 0;
     flex-direction: row;
     justify-content: center;
@@ -179,7 +180,6 @@ h2{
     align-items: center;
     width: 300px;
     height: auto;
-    padding: 20px;
     margin: 10px;
     background-color:rgba(17, 17, 17, 0.7);
     cursor: pointer;
@@ -188,7 +188,7 @@ h2{
 
 .portfolio .container .card .imgBx{
     position: relative;
-    width: 290px;
+    width: 300px;
     height: 200px;
     object-fit: cover;
 }
@@ -200,6 +200,16 @@ h2{
     width: 100%;
     height: 100%;
     border-radius: 5px;
+}
+
+.portfolio .container .card .imgBx img::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    background: url("imagens/seta-para-baixo.png");
+    z-index: 10;
 }
 
 .portfolio .container .card .content{
@@ -224,6 +234,75 @@ h2{
 .portfolio .container .card .content p{
     color: #fff;
     font-weight: 200;
+    text-align: justify;
+    padding: 10px;
+}
+
+.contato{
+    padding: 30px;
+}
+
+
+.formBox{
+    position: relative;
+    max-width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.formBox h3{
+    color: #fff;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+
+.formBox .FormInput{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.formBox .FormInput input[type="text"],
+.formBox .FormInput textarea{
+    width: 100%;
+    border: 1px solid #d9d3d2;
+    border-radius: 5px;
+    padding: 10px;
+    color: #111;
+    resize: none;
+    font-size: 15px;
+}
+
+.formBox .FormInput input[type="submit"]{
+    padding: 10px 20px;
+    max-width: 100px;
+    background: #111;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.copyrightText{
+    text-align: center;
+    padding: 20px 0;
+    background: #222;
+}
+
+.copyrightText p{
+    color: #fff;
+}
+
+.copyrightText p a{
+    text-decoration: none;
+    color: #11b3e4;
+    font-weight: 600;
+}
+
+.copyrightText p a:hover{
+    text-decoration: underline;
 }
 
 @media (max-width:991px){
@@ -271,16 +350,16 @@ h2{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.712);
+        background-color: rgba(255, 255, 255, 0.198);
         z-index: 100;
         clip-path: circle(15% at 50% 50%);
-        color: #111;
+        color: #fff;
+        text-shadow: 0 0 10px #111;
         font-size: 1em;
         font-weight: bold;
         text-transform: uppercase;
         animation: animate 5s infinite;
     }
-
     @keyframes animate {
         0%{
             clip-path: circle(15% at 50% 50%);
