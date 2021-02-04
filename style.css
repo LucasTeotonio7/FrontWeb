@@ -345,38 +345,9 @@ h2{
     .portfolio .container{
         height: auto;
     }
-    .portfolio .container .card .imgBx::before{
-        content: 'Toque';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(255, 255, 255);
-        z-index: 100;
-        clip-path: circle(15% at 50% 50%);
-        color: #fff;
-        text-shadow: 0 0 10px #111;
-        font-size: 1em;
-        font-weight: bold;
-        text-transform: uppercase;
-        animation: animate 5s infinite;
-    }
-    @keyframes animate {
-        0%{
-            clip-path: circle(15% at 50% 50%);
-        }
-        50%{
-            clip-path: circle(17% at 50% 50%);
-        }
-        100%{
-            clip-path: circle(15% at 50% 50%);
-        }
-    }
-
-    .portfolio .container .card:hover .imgBx::before{
-        opacity: 0;
+    .portfolio .container .card .content{
+        opacity: 1;
+        height: 250px;
     }
 }
 
