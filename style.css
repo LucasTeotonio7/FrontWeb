@@ -236,6 +236,7 @@ h2{
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px;
+    width: 250px;
 }
 
 .contato{
@@ -312,7 +313,9 @@ h2{
 
     .inicio .apresentacao {
         width: 100%;
-        padding: 20px;
+        height: 100vh;
+        padding: 30px;
+        justify-content: initial;
     }
     .inicio .apresentacao .redes {
         width: 80%;
@@ -350,7 +353,7 @@ h2{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.198);
+        background-color: rgb(255, 255, 255);
         z-index: 100;
         clip-path: circle(15% at 50% 50%);
         color: #fff;
