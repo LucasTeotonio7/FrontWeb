@@ -158,7 +158,7 @@ h2{
     padding: 40px;
 }
 .portfolio{
-    background: url("imagens/back1.jpg") no-repeat;
+    background: url("imagens/back-port.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -177,14 +177,11 @@ h2{
 
 .portfolio .container .card{
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 300px;
     height: auto;
     margin: 10px;
-    background-color:rgba(17, 17, 17, 0.7);
+    background-color: #fff;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -206,7 +203,7 @@ h2{
 }
 
 .portfolio .container .card .content{
-    height: 0px;
+    height: 0;
     opacity: 0;
     transition: 0.3s ease-in-out;
 }
@@ -218,25 +215,35 @@ h2{
 }
 
 .portfolio .container .card .content h3{
-    color: #fff;
+    color: #111;
     text-transform: uppercase;
     text-align: center;
     margin: 10px 0;
 }
 
 .portfolio .container .card .content p{
-    color: #fff;
-    font-weight: 200;
+    color: #111;
+    font-weight: 400;
     text-align: justify;
     padding: 10px;
+    font-size: 0.9em;
 }
 
 .portfolio .container .card .content a{
-    color: rgb(6, 172, 238);
+    position: absolute;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     padding: 10px;
-    width: 250px;
+    width: 100%;
+    bottom: 0;
+    background: #0096c7;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+.portfolio .container .card .content i{
+    margin-left: 5px;
 }
 
 .contato{
@@ -244,7 +251,7 @@ h2{
 }
 
 
-.formBox{
+.contato .formBox{
     position: relative;
     max-width: 500px;
     height: 400px;
@@ -253,19 +260,19 @@ h2{
     padding: 0;
 }
 
-.formBox h3{
+.contato .formBox h3{
     color: #fff;
     padding-bottom: 20px;
     font-weight: 300;
 }
 
-.formBox .FormInput{
+.contato .formBox .FormInput{
     width: 100%;
     margin-bottom: 20px;
 }
 
-.formBox .FormInput input[type="text"],
-.formBox .FormInput textarea{
+.contato .formBox .FormInput input[type="text"],
+.contato .formBox .FormInput textarea{
     width: 100%;
     border: 1px solid #d9d3d2;
     border-radius: 5px;
@@ -275,7 +282,7 @@ h2{
     font-size: 15px;
 }
 
-.formBox .FormInput input[type="submit"]{
+.contato .formBox .FormInput input[type="submit"]{
     padding: 10px 20px;
     max-width: 100px;
     background: #111;
