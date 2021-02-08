@@ -165,30 +165,37 @@ h2{
 
 .portfolio .container{
     position: relative;
-    display: flex;
     width: 100%;
     height: 100vh;
-    padding: 40px 0;
-    flex-direction: row;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 30px;
 }
 
 .portfolio .container .card{
     position: relative;
-    align-items: center;
     width: 300px;
-    height: auto;
-    margin: 10px;
-    background-color: #fff;
+    height: 215px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
     cursor: pointer;
     border-radius: 5px;
 }
 
+.portfolio .container .card:hover{
+    height: 450px;
+}
+
 .portfolio .container .card .imgBx{
     position: relative;
-    width: 300px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
 }
@@ -205,13 +212,15 @@ h2{
 .portfolio .container .card .content{
     height: 0;
     opacity: 0;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    visibility: hidden;
 }
 
 .portfolio .container .card:hover .content{
+    visibility: visible;
     opacity: 1;
-    transition-delay: 0.3s ease-in-out;
-    height: 250px;
+    height: 220px;
 }
 
 .portfolio .container .card .content h3{
@@ -351,9 +360,23 @@ h2{
     }
     .portfolio .container{
         height: auto;
+        padding: 10px;
+    }
+    .portfolio .container .card {
+        margin: 10px 20px;
+        padding: 0px 0px;
+        height: 450px;
+        width: 320px;
     }
     .portfolio .container .card .content{
         opacity: 1;
+        height: 250px;
+        visibility: visible;
+    }
+    .portfolio .container .card .imgBx {
+        height: 255px;
+    }
+    .portfolio .container .card:hover .content{
         height: 250px;
     }
 }
