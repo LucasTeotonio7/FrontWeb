@@ -9,14 +9,20 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <section class="inicio">
+        <section class="inicio" id="inicio">
             <div class="img-box">
                 <img src="imagens/lucas.jpeg">
             </div>
             <div class="apresentacao">
                 <div class="navegacao">
                     <h2>Meu Portfólio_</h2>
-                    <a class="menu-toggle"></a>
+                    <a class="menuToggle" onclick="toggleMenu()"></a>
+                    <ul class="itens">
+                        <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+                        <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+                        <li><a href="#portfolio" onclick="toggleMenu()">Meus Trabalhos</a></li>
+                        <li><a href="#rodape" onclick="toggleMenu()">Contato</a></li>
+                    </ul>
                 </div>
                 <h3><span>Olá,</span> Me chamo Lucas Teotonio, e eu sou um desenvolvedor <span>Front-End Web.</pan></h3>
                 <p>O foco do meu trabalho é na parte de interface do usuário, onde utilizo as tecnologias mais atuais no desenvolvimento web como:  HTML, CSS, Javascript, Typescrip, Bootstrap, Angular.</p><br>
@@ -110,29 +116,41 @@
                     </div>
                 </div>
         </section>
-        <section class="contato" id="contato">
-            <div class="titulo">
-                <h2>contacte-me</h2>
-                <p>Deixe sua mensagem!</p>
+        <footer>
+            <div class="container" id="rodape">
+                <h2>Contato</h2>
+                <ul class="info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="loc">Pombal-PB</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel: 83996207132">(83) 9 9620-7132</a></p>
+                    </li>
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <p><a href="mailto: lucas-santos-teo@hotmail.com">lucas-santos-teo@hotmail.com</a></p>
+                    </li>
+                </ul>
             </div>
-            <div class="formBox">
-                <h3>Deixe Sua Mensagem</h3>
-                <div class="FormInput">
-                    <input type="text" placeholder="Nome">
-                </div>
-                <div class="FormInput">
-                    <input type="text" placeholder="E-mail">
-                </div>
-                <div class="FormInput">
-                    <textarea placeholder="Deixe Sua Mensagem"></textarea>
-                </div>
-                <div class="FormInput">
-                    <input type="submit" value="Enviar">
-                </div>
-            </div>
-        </section>
+        </footer>
         <div class="copyrightText">
             <p>Copyright 2021 | <a href="#">Lucas Teotonio.</a> Todos Direitos Reservados</p>
         </div>
+        <script type="text/javascript">
+            window.addEventListener('scroll', function(){
+                const header = document.querySelector('header');
+                header.classList.toggle("sticky", window.scrollY > 0);
+            });
+
+            function toggleMenu(){
+                const menuToggle = document.querySelector(".menuToggle");
+                const navigation = document.querySelector(".itens");
+                menuToggle.classList.toggle("active");
+                navigation.classList.toggle("active");
+
+            }
+        </script>
     </body>
 </html>

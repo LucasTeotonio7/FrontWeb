@@ -34,7 +34,7 @@
 .inicio .apresentacao{
     position: relative;
     width: 55%;
-    padding: 50px;
+    padding: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,13 +73,75 @@ h2{
     text-align: justify;
 }
 
-.inicio .apresentacao .menu-toggle{
-    width: 30px;
-    height: 30px;
-    background: url("imagens/menu.png") no-repeat;
-    background-size: contain;
+.inicio .apresentacao .menuToggle{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background: url(imagens/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
     filter: invert(1);
+    transition: 0.3s;
+    cursor: pointer;    
+}
+.inicio .apresentacao .menuToggle.active{
+    background: url(imagens/close.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 100;
     cursor: pointer;
+    filter: invert(0);
+    position: fixed;
+    top:0;
+    right:0;
+}
+
+.inicio .apresentacao .itens{
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: -30px;
+    top: -30px;
+    background-color: #11b3e4;
+    list-style: none;
+    clip-path: circle(50% at 50% 50%);
+    transition: 1s;
+    animation: 0.5s animate;
+}
+@keyframes animate{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 220px;
+        height: 220px;
+    }
+}
+
+.inicio .apresentacao .itens li{
+    margin-top: 10px;
+}
+
+.inicio .apresentacao .itens li:hover a{
+    color: #222;
+}
+.inicio .apresentacao .itens li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+.inicio .apresentacao .itens.active{
+    display: flex;
 }
 
 .inicio .apresentacao .redes{
@@ -255,51 +317,40 @@ h2{
     margin-left: 5px;
 }
 
-.contato{
-    padding: 30px;
+footer{
+    height: auto;
 }
 
+footer h2{
+    background: #fff;
+    color: #333;
+}
 
-.contato .formBox{
-    position: relative;
-    max-width: 500px;
-    height: 400px;
+footer .info{
     display: flex;
-    flex-direction: column;
-    padding: 0;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
 }
 
-.contato .formBox h3{
-    color: #fff;
-    padding-bottom: 20px;
-    font-weight: 300;
+footer .info li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    margin: 10px;
 }
 
-.contato .formBox .FormInput{
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.contato .formBox .FormInput input[type="text"],
-.contato .formBox .FormInput textarea{
-    width: 100%;
-    border: 1px solid #d9d3d2;
-    border-radius: 5px;
-    padding: 10px;
+footer .info li a{
+    text-decoration: none;
     color: #111;
-    resize: none;
-    font-size: 15px;
 }
 
-.contato .formBox .FormInput input[type="submit"]{
-    padding: 10px 20px;
-    max-width: 100px;
-    background: #111;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
+footer .info li i{
+    margin: 0 10px;
 }
 
 .copyrightText{
@@ -335,7 +386,7 @@ h2{
     }
     .inicio .apresentacao .redes {
         width: 80%;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
     .sobre {
         padding: 10px;
@@ -379,5 +430,20 @@ h2{
     .portfolio .container .card:hover .content{
         height: 250px;
     }
+    .copyrightText p {
+        padding: 2px;
+    }
+    footer {
+        padding: 10px 25px;
+    }
 }
+
+@media (max-width: 400px){
+    .portfolio .container .card {
+        margin: 10px 0px;
+        padding: 0px 0px;
+        height: 460px;
+    }
+}
+
 
