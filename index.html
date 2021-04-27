@@ -1,157 +1,212 @@
 <!DOCTYPE html>
 <html lang=pt>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
-        <title>Lucas | Dev Front-End</title>
-        <link rel="icon" href="imagens/icon.jpg" />
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <section class="inicio" id="inicio">
-            <div class="img-box">
-                <img src="imagens/lucas.jpeg">
-            </div>
-            <div class="apresentacao">
-                <div class="navegacao">
-                    <h2>Meu Portfólio_</h2>
-                    <a class="menuToggle" onclick="toggleMenu()"></a>
-                    <ul class="itens">
-                        <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
-                        <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
-                        <li><a href="#portfolio" onclick="toggleMenu()">Meus Trabalhos</a></li>
-                        <li><a href="#rodape" onclick="toggleMenu()">Contato</a></li>
-                    </ul>
-                </div>
-                <h3><span>Olá,</span> Me chamo Lucas Teotonio, e eu sou um desenvolvedor <span>Front-End Web.</pan></h3>
-                <p>O foco do meu trabalho é na parte de interface do usuário, onde utilizo as tecnologias mais atuais no desenvolvimento web como:  HTML, CSS, Javascript, Typescrip, Angular.</p><br>
-                <ul class="redes">
-                    <li><a href="https://twitter.com/LucasTeotonio7" target="black_" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/lucasteotonio7/" title="Instagram" target="black_"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=5583996207132" title="Whatsapp " target="black_"><i class="fab fa-whatsapp"></i></a></li>
-                    <li><a href="https://github.com/LucasTeotonio7" target="black_" title="Github"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/lucas-teotonio-25b2571a0" title="Linkedin" target="black_"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-                <a class="btn-sobre" href="#sobre">sobre mim</a>
-            </div>
-        </section>
-        <section class="sobre" id="sobre">
-            <h2>Sobre Mim</h2>
-            <div class="container">
-                <section>
-                    <h3>Introdução</h3>
-                    <div class="box">
-                        <img src="imagens/intro.png">
-                        <p>Primeiramente obrigado por visitar minha página, como eu me apresentei de início me chamo Lucas e sou um desenvolvedor web front-end. O foco do meu trabalho é na parte de interface do usuário. Onde faço uso de tecnologias de desenvolvimento mais comuns nessa area como Html, Css, Javascript, Typescript, Angular.
-                        </p>
-                    </div>       
-                </section>
-                <section>
-                    <h3>Acadêmico</h3>
-                    <div class="box">
-                        <p>Eu conclui o curso de ciência da computação na Universidade Estadual da Paraíba (UEPB) no fim de 2019. A graduação foi focada mais na área do desenvolvimento de sistemas. <br><br>  Depois da graduação busquei me especializar na área front-end, onde fui buscando materiais e cursos na internet para me aprimorar como desenvolvedor.</p>
-                            </p>
-                        <img src="imagens/educacao.png">
-                    </div>  
-                </section>
-                <section>
-                    <h3>Trabalho</h3>
-                    <div class="box">
-                        <img src="imagens/trabalho.png">
-                        <p>Na área de desenvolvimento tenho pouca experiência de trabalho, iniciei como frelancer em julho de 2020 e estou desenvolvendo nesse segmento até então, em maioria componentes menores.</p>
-                    </div>
-                </section>
-                <section>
-                    <h3>Objetivos</h3>
-                    <div class="box">
-                        <p>Atualmente busco emprego na minha área de atuação para desenvolver minhas capacidades como programador, pois a atuação de um trabalho pode promover uma evolução mais rápida que projetos pessoais ou frelancers não promoveria para quem está iniciando na área.</p>
-                        <img src="imagens/objetivo.png">
-                    </div>    
-                </section>    
-            </div>
-        </section>
-        <section class="portfolio" id="portfolio">
-            <h2>Meus Trabalhos</h2>
-            <div class="container">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="imagens/back-superdig.jpg">
-                    </div>
-                    <div class="content">
-                        <h3>Superdig</h3>
-                        <p>Site de um aplicativo para gerenciamento de supermercado. Esse é meu primeiro projeto frelancer mais completo feito pra outra empresa, que está ativo atualmente</p>
-                        <a class="link" href="https://www.superdig.com.br" target="_blank">Visitar Site <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="imagens/expresso.PNG">
-                    </div>
-                    <div class="content">
-                        <h3>Café Expresso</h3>
-                        <p>Projeto pessoal de uma cafeteria, que pode ser acessado no link abaixo.</p>
-                        <a class="link" href="https://web-projects-mu.vercel.app/Cafe/main.html" target="_blank">Veja o resultado <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="imagens/orkut.jpg">
-                    </div>
-                    <div class="content">
-                        <h3>Orkut 2021</h3>
-                        <p>Projeto pessoal de como seria o visual do orkut, antiga rede social do google, nos dias atuais, com base nas redes de hoje. <br>Em desenvolvimento [...]</p>
-                        
-                        <a class="link" href="https://projeto-angular.vercel.app" target="_blank">Veja o resultado <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="imagens/back-outros.jpg">
-                    </div>
-                    <div class="content">
-                        <h3>Outros Projetos</h3>
-                        <p>Aqui você vai encontrar de tudo, desde pequenos projetos aos mais avançados, alguns de minha autoria, outros produzindos em conjunto, fique a vontade para explorar mais :)</p>
-                        <a class="link" href="https://web-projects-mu.vercel.app/" target="_blank">Veja meus projetos<i class="fas fa-external-link-alt"></i></a>
-                        <a class="link" href="https://web-projects-mu.vercel.app/" target="_blank">Acessar Projetos<i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-        </section>
-        <footer>
-            <div class="container" id="rodape">
-                <h2>Contato</h2>
-                <ul class="info">
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span class="loc">Pombal-PB</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <p><a href="tel: 83996207132">(83) 9 9620-7132</a></p>
-                    </li>
-                    <li>
-                        <i class="far fa-envelope"></i>
-                        <p><a href="mailto: lucas-santos-teo@hotmail.com">lucas-santos-teo@hotmail.com</a></p>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-        <div class="copyrightText">
-            <p>Copyright 2021 | <a href="#">Lucas Teotonio.</a> Todos Direitos Reservados</p>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous">
+    <title>Lucas | Dev Front-End</title>
+    <link rel="icon" href="imagens/icon.jpg" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2 onclick="toggleMenu()">Meu Portfólio_</h2>
+        <a class="menuToggle" onclick="toggleMenu()"></a>
+        <ul class="itens">
+            <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+            <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+            <li><a href="#portfolio" onclick="toggleMenu()">Meus Trabalhos</a></li>
+            <li><a href="#rodape" onclick="toggleMenu()">Contato</a></li>         
+        </ul>   
+    </header>
+    <section class="inicio" id="inicio">
+        <div class="img-box">
+            <img src="imagens/lucas.jpeg">
         </div>
-        <script type="text/javascript">
-            window.addEventListener('scroll', function(){
-                const header = document.querySelector('header');
-                header.classList.toggle("sticky", window.scrollY > 0);
-            });
+        <div class="apresentacao">
+            <h3><span>Olá,</span> Me chamo Lucas Teotonio, e eu sou um desenvolvedor <span>Front-End Web.</pan>
+            </h3>
+            <p>O foco do meu trabalho é na parte de interface do usuário, onde utilizo as tecnologias mais atuais no
+                desenvolvimento web como: HTML, CSS, Javascript, Typescrip, Angular.</p><br>
+            <ul class="redes">
+                <li><a href="https://twitter.com/LucasTeotonio7" target="black_" title="Twitter"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/lucasteotonio7/" title="Instagram" target="black_"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5583996207132" title="Whatsapp " target="black_"><i
+                            class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://github.com/LucasTeotonio7" target="black_" title="Github"><i
+                            class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/lucas-teotonio-25b2571a0" title="Linkedin" target="black_"><i
+                            class="fab fa-linkedin"></i></a></li>
+            </ul>
+            <a class="btn-sobre" href="#sobre">sobre mim</a>
+            <a class="seta" href="#sobre"></a>
+        </div>
+    </section>
+    <section class="sobre" id="sobre">
+        <!-- <h2>Sobre Mim</h2> -->
+        <div class="container">
+            <section>
+                <div class="box">
+                    <img src="imagens/user-init.jpg">
+                    <p>Me chamo Lucas e sou um desenvolvedor web front-end, isso você já sabe! Mas se quer saber mais sobre? desce ai quem vou te contando!
+                    </p>
+                    <a class="seta" href="#b2"></a>
+                </div>
+            </section>
+            <section id="b2">
+                <div class="box">
+                    <p>Eu conclui o curso de ciência da computação na Universidade Estadual da Paraíba (UEPB) no fim de 2019, onde a graduação foi focada mais na área de desenvolvimento de sistemas</p>
+                    <img src="imagens/animate1.gif">
+                    <a class="seta" href="#b3"></a>
+                </div>
+            </section>
+            <section id="b3">
+                <div class="box">
+                    <img src="imagens/animate2.gif">
+                    <p>Depois da graduação fiz alguns trabalhos como Freelancer, desenvolvendo componentes menores para terceiros, fazendo uso basicamente de HTML e CSS e JS.</p>
+                    <a class="seta" href="#b4"></a>
+                </div>
+            </section>
+            <section id="b4">
+                <div class="box">
+                    <p>Para me aprofundar na area fiz cursos para aprender a utilizar o framework Angular, que me ajudou a otimizar minhas aplicações web.</p>
+                    <a class="seta" href="#b5"></a>
+                    <img src="imagens/animate3.gif">
+                </div>
+            </section>
+            <section id="b5">
+                <div class="box">
+                    <img src="imagens/animate4.gif">
+                    <p>Hoje posso dizer que tenho conhecimento sobre 
+                        HTML, CSS, Javascript, Angular, Typescript, ApiRest, Django.
+                    </p>
+                    <a class="seta" href="#portfolio"></a>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2>Meus Trabalhos</h2>
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="imagens/back-superdig.jpg">
+                </div>
+                <div class="content">
+                    <h3>Superdig</h3>
+                    <p>Site de um aplicativo para gerenciamento de supermercado. Esse é meu primeiro projeto frelancer
+                        mais completo feito pra outra empresa, que está ativo atualmente</p>
+                    <a class="link" href="https://www.superdig.com.br" target="_blank">Visitar Site <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="imagens/expresso.PNG">
+                </div>
+                <div class="content">
+                    <h3>Café Expresso</h3>
+                    <p>Projeto pessoal de uma cafeteria, que pode ser acessado no link abaixo.</p>
+                    <a class="link" href="https://web-projects-mu.vercel.app/Cafe/main.html" target="_blank">Veja o
+                        resultado <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="imagens/icon-angular.png">
+                </div>
+                <div class="content">
+                    <h3>Aplicação CRUD</h3>
+                    <p>Aqui é o resultado de um curso de Angular, onde foi feito um CRUD consumindo um backend simples em Json.</p>
+                    <a class="link" href="https://www.linkedin.com/posts/lucas-teotonio-25b2571a0_esse-foi-o-resultado-final-do-curso-de-angular-activity-6775939439198920704-SNT6" target="_blank">Ver Resultado<i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="imagens/icon-angular-d.png">
+                </div>
+                <div class="content">
+                    <h3>Aplicação CRUD</h3>
+                    <p>Aqui é o resultado de outro curso de Angular, porem usando API Django para fazer a comunição com o banco de dados (SQLite)</p>
+                    <a class="link" href="https://www.linkedin.com/posts/lucas-teotonio-25b2571a0_angular-django-sqlite-activity-6792213680961400832-CD75" target="_blank">Ver Resultado<i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="imagens/orkut.jpg">
+                </div>
+                <div class="content">
+                    <h3>Orkut 2021</h3>
+                    <p>Projeto pessoal de como seria o visual do orkut, antiga rede social do google, nos dias atuais,
+                        com base nas redes de hoje. <br>Em desenvolvimento [...]</p>
 
-            function toggleMenu(){
-                const menuToggle = document.querySelector(".menuToggle");
-                const navigation = document.querySelector(".itens");
-                menuToggle.classList.toggle("active");
-                navigation.classList.toggle("active");
+                    <a class="link" href="https://projeto-angular.vercel.app" target="_blank">Veja o resultado <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="imagens/back-outros.jpg">
+                </div>
+                <div class="content">
+                    <h3>Outros Projetos</h3>
+                    <p>Aqui você vai encontrar de tudo, desde pequenos projetos aos mais avançados, alguns de minha
+                        autoria, outros produzindos em conjunto, fique a vontade para explorar mais :)</p>
+                    <a class="link" href="https://web-projects-mu.vercel.app/" target="_blank">Veja meus projetos<i
+                            class="fas fa-external-link-alt"></i></a>
+                    <a class="link" href="https://web-projects-mu.vercel.app/" target="_blank">Acessar Projetos<i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="container" id="rodape">
+            <h2>Contato</h2>
+            <ul class="info">
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="loc">Pombal-PB</span>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <p><a href="tel: 83996207132">(83) 9 9620-7132</a></p>
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i>
+                    <p><a href="mailto: lucas-santos-teo@hotmail.com">lucas-santos-teo@hotmail.com</a></p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p>Copyright 2021 | <a href="#">Lucas Teotonio.</a> Todos Direitos Reservados</p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+    
 
-            }
-        </script>
-    </body>
+        });
+
+        function toggleMenu() {
+            const menuToggle = document.querySelector(".menuToggle");
+            const h2 = document.querySelector("h2");
+            const navigation = document.querySelector(".itens");           
+            menuToggle.classList.toggle("active");
+            navigation.classList.toggle("active");
+            h2.classList.toggle("active");
+
+        }
+    </script>
+</body>
+
 </html>
