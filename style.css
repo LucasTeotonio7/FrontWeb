@@ -8,6 +8,12 @@
     scroll-behavior: smooth;
 }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: auto;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
 .seta{
     position: absolute;
     bottom: 0;
@@ -33,6 +39,8 @@
     }
 }
 
+
+
 header{
     position: fixed;
     width: 50%;
@@ -47,10 +55,28 @@ header{
 
 header h2{
     z-index: 200;
-    background-color: #111;
-    color: #fff;
+    color: #333;
+    cursor: pointer;
 }
 
+header h2 span{
+    color: #11b3e4;
+    margin-left: 2px;
+    font-size: 14px;
+}
+
+header h2::before{
+    content: '';
+    position: absolute;
+    top:8px;
+    left: 0;
+    width: 70px;
+    height: 2px;
+    background: #333;
+}
+header.sticky h2::before{
+    background: #11b3e4;
+}
 header.sticky{
     width: 100%;
     height: 40px;
@@ -58,14 +84,17 @@ header.sticky{
     transition: 0.5s;
     animation: 0.5s;
     background-color: #111;
+    display: flex;
+    align-items: center;
 }
 
 header.sticky h2{
     font-size: 12px;
+    color: #fff;
 }
 
-header h2.active{
-    color:#11b3e4;
+header.sticky h2::before{
+    background:none;
 }
 
 header .menuToggle{
@@ -100,7 +129,7 @@ header.sticky .menuToggle{
 
 header .itens{
     position: fixed;
-    width: 200px;
+    width: 300px;
     height: 100vh;
     top: 0;
     right: 0;
@@ -120,7 +149,7 @@ header .itens{
         height: 0px;
     }
     100%{
-        width: 200px;
+        width: 300px;
         height: 100vh;
     }
 }
@@ -166,6 +195,12 @@ header .itens.active{
     height: 100%;
     object-fit: cover;
     object-position: bottom center;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    box-shadow: 0 0 10px #111;
+}
+
+.img-box.sticky{
+    opacity: 70%;
 }
 
 .inicio .apresentacao{
@@ -189,6 +224,7 @@ h2{
     text-align: justify;
     text-transform: capitalize;
     margin-bottom: 15px;
+    font-size: 20px;
 }
 
 .inicio .apresentacao h3 span{
@@ -223,168 +259,125 @@ h2{
     color: #111;
 }
 
-.inicio .apresentacao .btn-sobre{
-    background-color: #11b3e4;
+.inicio .apresentacao .btn-port{
+    border: 1px solid #11b3e4;
+    border-radius: 30px;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 900;
-    color: #fff;
+    color: #11b3e4;
     padding: 10px 25px;
     transition: 0.3s;
 }
 
-.inicio .apresentacao .btn-sobre:hover{
+.inicio .apresentacao .btn-port:hover{
     letter-spacing: 2px;
+    color: #fff;
+    background-color: #11b3e4;
 }
 
 .sobre{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-}
-
-
-.sobre .container section{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 100%;
+    min-height: 100vh;
 }
 
-.sobre .container section h3{
-    color: #333;
-    text-transform: uppercase;
-    font-size: 1.0em;
-}
-.sobre .container section .box{
-    position: relative;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.sobre .container section .box img{
-    width: 500px;
-}
 
-.sobre .container section .box p{
-    text-align: justify;
-    padding: 10px;
-    color: #111;
-    font-weight: 600;
-    font-size: 20px;
-}
-.portfolio{
-    position: relative;
+.sobre h2, .sobre h3{
     padding-top: 50px;
-    background: url("imagens/back-port.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;   
+    color: #000;
+    border-bottom: 1px solid #999;
+    font-size: 20px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sobre .listagem{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;  
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sobre .descricao{
+    padding: 10px;
+    color: #333;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.sobre .box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.sobre h4{
+    font-size: 16px;
+    padding-top: 50px;
+    color: #000;
+    font-size: 12px;
+}
+
+.sobre .box img{
+    width: 50px;
+    height: 50px;
 }
 
 .portfolio h2{
-    color: white;
-    font-size: 30px;
+    padding-top: 50px;
+    color: #000;
+    border-bottom: 1px solid #999;
+    font-size: 20px;
 }
 
-.portfolio .container{
-    position: relative;
+.carousel-item{
     width: 100%;
-    height: 180vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    /* padding: 10px; */
 }
 
-.portfolio .container .card{
-    position: relative;
-    width: 300px;
-    height: 450px;
-    background: #fff;
-    margin: 30px 10px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* .portfolio .container .card:hover{
-    height: 450px;
-} */
-
-.portfolio .container .card .imgBx{
-    position: relative;
+.carousel-item img{
     width: 100%;
-    height: 200px;
-    
-}
-
-.portfolio .container .card .imgBx img{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
+    height: 500px;
     object-fit: cover;
-    object-position: center center;
+    object-position: top center;
 }
 
-.portfolio .container .card .content{
-    height: 220px;
-    opacity: 1;
-    transition: 0.4s ease-in-out;
-    position: relative;
-    visibility: visible;
-}
-
-/* .portfolio .container .card:hover .content{
-    visibility: visible;
-    opacity: 1;
-    height: 220px;
-} */
-
-.portfolio .container .card .content h3{
-    color: #111;
+.carousel-caption h3{
+    margin-bottom: 30px;
     text-transform: uppercase;
+}
+
+.carousel-caption p{
     text-align: center;
-    margin: 10px 0;
 }
 
-.portfolio .container .card .content p{
-    color: #111;
-    font-weight: 400;
-    text-align: justify;
-    padding: 10px;
-    font-size: 0.9em;
+.carousel-caption p i{
+    text-transform: inherit;
 }
-
-.portfolio .container .card .content a{
-    position: absolute;
+.carousel-caption .link{
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     padding: 10px;
-    width: 100%;
-    bottom: 0;
-    background: #0096c7;
-    color: #fff;
-    font-weight: 500;
+    border: none;
+    width: 150px;
+    border-radius: 30px;
+    color: #222;
+    font-weight: 700;
     cursor: pointer;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #222;
 }
-.portfolio .container .card .content i{
-    margin-left: 5px;
+
+.carousel-caption .link:hover{
+    padding: 10px 12px;
 }
 
 footer{

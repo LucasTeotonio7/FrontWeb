@@ -9,19 +9,24 @@
         crossorigin="anonymous">
     <title>Lucas | Dev Front-End</title>
     <link rel="icon" href="imagens/icon.jpg" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
     <header>
-        <h2 onclick="toggleMenu()">Meu Portfólio_</h2>
+        <h2>Dev<span>Front-end</span></h2>
         <a class="menuToggle" onclick="toggleMenu()"></a>
         <ul class="itens">
             <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
             <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
             <li><a href="#portfolio" onclick="toggleMenu()">Meus Trabalhos</a></li>
-            <li><a href="#rodape" onclick="toggleMenu()">Contato</a></li>         
-        </ul>   
+            <li><a href="#rodape" onclick="toggleMenu()">Contato</a></li>
+        </ul>
     </header>
     <section class="inicio" id="inicio">
         <div class="img-box">
@@ -30,8 +35,8 @@
         <div class="apresentacao">
             <h3><span>Olá,</span> Me chamo Lucas Teotonio, e eu sou um desenvolvedor <span>Front-End Web.</pan>
             </h3>
-            <p>O foco do meu trabalho é na parte de interface do usuário, onde utilizo as tecnologias mais atuais no
-                desenvolvimento web como: HTML, CSS, Javascript, Typescrip, Angular.</p><br>
+            <p>O foco do meu trabalho é na parte responsável pela experiência do usuário dentro de uma aplicação web.
+            </p><br>
             <ul class="redes">
                 <li><a href="https://twitter.com/LucasTeotonio7" target="black_" title="Twitter"><i
                             class="fab fa-twitter"></i></a></li>
@@ -44,128 +49,120 @@
                 <li><a href="https://www.linkedin.com/in/lucas-teotonio-25b2571a0" title="Linkedin" target="black_"><i
                             class="fab fa-linkedin"></i></a></li>
             </ul>
-            <a class="btn-sobre" href="#sobre">sobre mim</a>
-            <a class="seta" href="#sobre"></a>
+            <a class="btn-port" href="#portfolio">Meu Portfólio</a>
         </div>
     </section>
     <section class="sobre" id="sobre">
-        <!-- <h2>Sobre Mim</h2> -->
-        <div class="container">
-            <section>
-                <div class="box">
-                    <img src="imagens/user-init.jpg">
-                    <p>Me chamo Lucas e sou um desenvolvedor web front-end, isso você já sabe! Mas se quer saber mais sobre? desce ai quem vou te contando!
-                    </p>
-                    <a class="seta" href="#b2"></a>
-                </div>
-            </section>
-            <section id="b2">
-                <div class="box">
-                    <p>Eu conclui o curso de ciência da computação na Universidade Estadual da Paraíba (UEPB) no fim de 2019, onde a graduação foi focada mais na área de desenvolvimento de sistemas</p>
-                    <img src="imagens/animate1.gif">
-                    <a class="seta" href="#b3"></a>
-                </div>
-            </section>
-            <section id="b3">
-                <div class="box">
-                    <img src="imagens/animate2.gif">
-                    <p>Depois da graduação fiz alguns trabalhos como Freelancer, desenvolvendo componentes menores para terceiros, fazendo uso basicamente de HTML e CSS e JS.</p>
-                    <a class="seta" href="#b4"></a>
-                </div>
-            </section>
-            <section id="b4">
-                <div class="box">
-                    <p>Para me aprofundar na area fiz cursos para aprender a utilizar o framework Angular, que me ajudou a otimizar minhas aplicações web.</p>
-                    <a class="seta" href="#b5"></a>
-                    <img src="imagens/animate3.gif">
-                </div>
-            </section>
-            <section id="b5">
-                <div class="box">
-                    <img src="imagens/animate4.gif">
-                    <p>Hoje posso dizer que tenho conhecimento sobre 
-                        HTML, CSS, Javascript, Angular, Typescript, ApiRest, Django.
-                    </p>
-                    <a class="seta" href="#portfolio"></a>
-                </div>
-            </section>
+        <h2>Sobre Mim</h2>
+        <p class="descricao">
+            Formando em ciências da computação pela universidade estadual da paraíba (UEPB). Atualmente atuando como Desenvolvedor Freelancer Front-End de componentes web para terceiros. Caso queira contratar meus serviços é só entrar em <a href="#rodape">contato</a>. Mais abaixo você pode ver os <a href="#portfolio">trabalhos</a> que eu já produzi.
+        </p>
+        <h3>Tecnologias de trabalho</h3>
+        <div class="listagem">      
+            <div class="box">
+                <h4>HTML</h4>
+                <img src="imagens/html.png">
+            </div>
+            <div class="box">
+                <h4>CSS</h4>
+                <img src="imagens/css.png">
+            </div>
+            <div class="box">
+                <h4>JAVASCRIPT</h4>
+                <img src="imagens/js.png">
+            </div>
+            <div class="box">
+                <h4>TYPESCRIPT</h4>
+                <img src="imagens/typescript.png">
+            </div>
+            <div class="box">
+                <h4>ANGULAR</h4>
+                <img src="imagens/angular.png">
+            </div>
+            <div class="box">
+                <h4>MATERIAL</h4>
+                <img src="imagens/material.png">
+            </div>
+            <div class="box">
+                <h4>BOOTSTRAP</h4>
+                <img src="imagens/bootstrap.png">
+            </div>
+            <div class="box">
+                <h4>FONT AWESOME</h4>
+                <img src="imagens/font_awesome.png">
+            </div>
+            <div class="box">
+                <h4>jQuery</h4>
+                <img src="imagens/jquery.png">
+            </div>
         </div>
     </section>
     <section class="portfolio" id="portfolio">
-        <h2>Meus Trabalhos</h2>
-        <div class="container">
-            <div class="card">
-                <div class="imgBx">
-                    <img src="imagens/back-superdig.jpg">
-                </div>
-                <div class="content">
-                    <h3>Superdig</h3>
-                    <p>Site de um aplicativo para gerenciamento de supermercado. Esse é meu primeiro projeto frelancer
-                        mais completo feito pra outra empresa, que está ativo atualmente</p>
-                    <a class="link" href="https://www.superdig.com.br" target="_blank">Visitar Site <i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="imagens/expresso.PNG">
-                </div>
-                <div class="content">
-                    <h3>Café Expresso</h3>
-                    <p>Projeto pessoal de uma cafeteria, que pode ser acessado no link abaixo.</p>
-                    <a class="link" href="https://web-projects-mu.vercel.app/Cafe/main.html" target="_blank">Veja o
-                        resultado <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="imagens/icon-angular.png">
-                </div>
-                <div class="content">
-                    <h3>Aplicação CRUD</h3>
-                    <p>Aqui é o resultado de um curso de Angular, onde foi feito um CRUD consumindo um backend simples em Json.</p>
-                    <a class="link" href="https://www.linkedin.com/posts/lucas-teotonio-25b2571a0_esse-foi-o-resultado-final-do-curso-de-angular-activity-6775939439198920704-SNT6" target="_blank">Ver Resultado<i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="imagens/icon-angular-d.png">
-                </div>
-                <div class="content">
-                    <h3>Aplicação CRUD</h3>
-                    <p>Aqui é o resultado de outro curso de Angular, porem usando API Django para fazer a comunição com o banco de dados (SQLite)</p>
-                    <a class="link" href="https://www.linkedin.com/posts/lucas-teotonio-25b2571a0_angular-django-sqlite-activity-6792213680961400832-CD75" target="_blank">Ver Resultado<i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="imagens/orkut.jpg">
-                </div>
-                <div class="content">
-                    <h3>Orkut 2021</h3>
-                    <p>Projeto pessoal de como seria o visual do orkut, antiga rede social do google, nos dias atuais,
-                        com base nas redes de hoje. <br>Em desenvolvimento [...]</p>
+        <h2>Meus trabalhos</h2>
+        <div id="demo" class="carousel slide" data-ride="carousel">
 
-                    <a class="link" href="https://projeto-angular.vercel.app" target="_blank">Veja o resultado <i
-                            class="fas fa-external-link-alt"></i></a>
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagens/t1-superdig.jpg">
+                    <div class="carousel-caption">
+                        <h3>SuperDig</h3>
+                        <p>Site de apresentação do aplicativo superdig, que se trata de um sistema <i>delivery</i> de supermercado de compras de produtos online para entrega em domicílio.</p>
+                        <form action="https://web-projects-mu.vercel.app/SuperDig/main.html" target="_blank">
+                            <input class="link" type="submit" value="Resultado"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/t2-expresso.PNG" alt="Chicago" width="1100" height="500">
+                    <div class="carousel-caption">
+                        <h3>O Expresso</h3>
+                        <p>Projeto pessoal do site de uma cafeteria, que pode ser acessado clicando em resultado.</p>
+                        <form action="https://web-projects-mu.vercel.app/Cafe/main.html" target="_blank">
+                            <input class="link" type="submit" value="Resultado"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/t3-projetoAngular.jpg" alt="New York" width="1100" height="500">
+                    <div class="carousel-caption">
+                        <h3>Projeto Angular</h3>
+                        <p>Aqui é o resultado de um curso de Angular, onde foi desenvolvido um sistema de cadastro de itens consumindo um backend de um arquivo Json.</p>
+                        <form action="https://www.linkedin.com/posts/lucas-teotonio-25b2571a0_esse-foi-o-resultado-final-do-curso-de-angular-activity-6775939439198920704-SNT6" target="_blank">
+                            <input class="link" type="submit" value="Resultado"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/t4-projeto 2.jpg" alt="New York" width="1100" height="500">
+                    <div class="carousel-caption">
+                        <h3>Projeto angular + Django</h3>
+                        <p>Resultado de outro curso de Angular, porem usando API Django para fazer a comunição com
+                            o banco de dados (SQLite)</p>
+                        <form action="https://www.linkedin.com/posts/lucas-teotonio-25b2571a0_angular-django-sqlite-activity-6792213680961400832-CD75" target="_blank">
+                            <input class="link" type="submit" value="Resultado"/>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="imagens/back-outros.jpg">
-                </div>
-                <div class="content">
-                    <h3>Outros Projetos</h3>
-                    <p>Aqui você vai encontrar de tudo, desde pequenos projetos aos mais avançados, alguns de minha
-                        autoria, outros produzindos em conjunto, fique a vontade para explorar mais :)</p>
-                    <a class="link" href="https://web-projects-mu.vercel.app/" target="_blank">Veja meus projetos<i
-                            class="fas fa-external-link-alt"></i></a>
-                    <a class="link" href="https://web-projects-mu.vercel.app/" target="_blank">Acessar Projetos<i
-                            class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
     </section>
     <footer>
         <div class="container" id="rodape">
@@ -173,7 +170,7 @@
             <ul class="info">
                 <li>
                     <i class="fas fa-map-marker-alt"></i>
-                    <span class="loc">Pombal-PB</span>
+                    <p class="loc">Pombal-PB</p>
                 </li>
                 <li>
                     <i class="fas fa-phone"></i>
@@ -193,20 +190,20 @@
         window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             header.classList.toggle("sticky", window.scrollY > 0);
-    
+            const img = document.querySelector('.img-box');
+            img.classList.toggle("sticky", window.scrollY > 0);
 
         });
 
         function toggleMenu() {
             const menuToggle = document.querySelector(".menuToggle");
-            const h2 = document.querySelector("h2");
-            const navigation = document.querySelector(".itens");           
+            const navigation = document.querySelector(".itens");
             menuToggle.classList.toggle("active");
             navigation.classList.toggle("active");
-            h2.classList.toggle("active");
 
         }
     </script>
+
 </body>
 
 </html>
